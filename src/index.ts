@@ -1,4 +1,4 @@
-import WelcomeScene from './scene/welcome.scene';
+import DemoScene from './scene/demo.scene';
 
 /**
  * @class MagicTowerGame
@@ -9,7 +9,7 @@ class MagicTowerGame {
     constructor (w, h) {
         this.game = new Phaser.Game(w, h, Phaser.AUTO, 'game');
 
-        this.game.state.add('welcome', new WelcomeScene());
+        this.game.state.add('welcome', new DemoScene());
 
         this.game.state.start('welcome');
     }

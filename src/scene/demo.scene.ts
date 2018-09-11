@@ -3,7 +3,7 @@ import { Timer } from "phaser";
 /**
  * @class WelcomeScene
  */
-export default class WelcomeScene extends Phaser.State {
+export default class DemoScene extends Phaser.State {
     cursor: Phaser.CursorKeys;
     hero: Phaser.Sprite;
     ground: Phaser.Group;
