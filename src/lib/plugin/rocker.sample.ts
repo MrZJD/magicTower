@@ -49,7 +49,7 @@ export default class RockerSampleScene extends Phaser.State {
         }, null, this);
 
         if (!this.rocker.isMove) {
-            this.hero.animations.stop()
+            this.hero.animations.currentAnim.stop(true)
             this.hero.body.velocity.x = 0
             this.hero.body.velocity.y = 0
             return

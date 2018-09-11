@@ -41,16 +41,16 @@ export default class RockerPlugin extends Phaser.Plugin {
         this.game.load.image('rocker', '../assets/btn_normal.png')
         this.game.load.image('rockerActive', '../assets/btn_right.png')
 
-        this.imageRatio = this.game.width / gameConfig.wWMax
+        this.imageRatio = (this.game.width / gameConfig.wWMax) + 0.2
     }
 
     create () {
         // 2. 绘制摇杆
-        this.rocker = this.game.add.image(this.game.width - 50, this.game.height - 70, 'rocker')
+        this.rocker = this.game.add.image(this.game.width - 60, this.game.height - 70, 'rocker')
         this.rocker.scale.setTo(this.imageRatio, this.imageRatio)
         this.rocker.anchor.setTo(0.5, 0.5)
 
-        this.rockerActive = this.game.add.image(this.game.width - 50, this.game.height - 70, 'rockerActive')
+        this.rockerActive = this.game.add.image(this.game.width - 60, this.game.height - 70, 'rockerActive')
         this.rockerActive.scale.setTo(this.imageRatio, this.imageRatio)
         this.rockerActive.anchor.setTo(0.5, 0.5)
         this.rockerActive.visible = false
