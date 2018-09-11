@@ -1,17 +1,24 @@
-import WelcomeScene from './scene/welcome.scene';
+import routeConfig from './route.config'
 
 /**
  * @class MagicTowerGame
  */
 class MagicTowerGame {
-    game: Phaser.Game;
+    game: Phaser.Game
 
     constructor (w, h) {
-        this.game = new Phaser.Game(w, h, Phaser.AUTO, 'game');
+        this.game = new Phaser.Game(w, h, Phaser.AUTO, 'game')
 
-        this.game.state.add('welcome', new WelcomeScene());
+        this.loadRoute(routeConfig.routes)
 
-        this.game.state.start('welcome');
+        this.game.state.start(routeConfig.entry)
+    }
+
+    loadRoute (routes) {
+        let state = this.game.state
+        routes.forEach(route => {
+            state.add(route.name, new route.scene())
+        })
     }
 }
 
