@@ -7,7 +7,7 @@
         "addtype": "cp ./node_modules/phaser/typescript/* ./typings",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack",
-        "dev": "webpack-dev-server --inline"
+        "dev": "webpack-dev-server --inline --host 10.0.6.147"
     },
     "keywords": [],
     "author": "",

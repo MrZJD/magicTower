@@ -9,7 +9,7 @@ export default {
             scene: WelcomeScene
         }, {
             name: 'dev',
-            scene: RockerSampleScene
+            scene: WelcomeScene
         }
     ]
 }
