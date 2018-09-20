@@ -1,11 +1,15 @@
-import DemoScene from './scene/demo.scene';
+import WelcomeScene from './scene/welcome.scene'
+import RockerSampleScene from './lib/plugin/rocker.sample'
 
 export default {
-    entry: 'welcome',
+    entry: 'dev',
     routes: [
         {
             name: 'welcome',
-            scene: DemoScene
+            scene: WelcomeScene
+        }, {
+            name: 'dev',
+            scene: RockerSampleScene
         }
     ]
 }
